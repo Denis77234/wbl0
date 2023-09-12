@@ -1,0 +1,47 @@
+{{ define "order" }}
+<h2>Order</h2>
+<p>OrderUid: {{.OrderUid}}</p>
+<p>TrackNumber: {{.TrackNumber}}</p>
+<p>Entry: {{.Entry}}</p>
+<p>Locale: {{.Locale}}</p>
+<p>InternalSignature: {{.InternalSignature}}</p>
+<p>CustomerId: {{.CustomerId}}</p>
+<p>DeliveryService: {{.DeliveryService}}</p>
+<p>Shardkey: {{.Shardkey}}</p>
+<p>SmId: {{.SmId}}</p>
+<p>DateCreated: {{.DateCreated}}</p>
+<p>OofShard: {{.OofShard}}</p>
+<h2>Delivery</h2>
+<p>Name: {{.Delivery.Name}}</p>
+<p>Phone: {{.Delivery.Phone}}</p>
+<p>Zip: {{.Delivery.Zip}}</p>
+<p>City: {{.Delivery.City}}</p>
+<p>Address: {{.Delivery.Address}}</p>
+<p>Region: {{.Delivery.Region}}</p>
+<p>Email: {{.Delivery.Email}}</p>
+<h2>payment</h2>
+<p>Transaction: {{.Payment.Transaction}}</p>
+<p>RequestId: {{.Payment.RequestId}}</p>
+<p>Currency: {{.Payment.Currency}}</p>
+<p>Provider: {{.Payment.Provider}}</p>
+<p>Amount: {{.Payment.Amount}}</p>
+<p>PaymentDt: {{.Payment.PaymentDt}}</p>
+<p>Bank: {{.Payment.Bank}}</p>
+<p>DeliveryCost: {{.Payment.DeliveryCost}}</p>
+<p>GoodsTotal: {{.Payment.GoodsTotal}}</p>
+<p>CustomFee: {{.Payment.CustomFee}}</p>
+    {{range $index, $element := .Items}}
+        <h2>item {{$index}}</h2>
+        <p>ChrtId: {{$element.ChrtId}}</p>
+        <p>TrackNumber: {{$element.TrackNumber}}</p>
+        <p>Price: {{$element.Price}}</p>
+        <p>Rid: {{$element.Rid}}</p>
+        <p>Name: {{$element.Name}}</p>
+        <p>Sale: {{$element.Sale}}</p>
+        <p>Size: {{$element.Size}}</p>
+        <p>TotalPrice: {{$element.TotalPrice}}</p>
+        <p>NmId: {{$element.NmId}}</p>
+        <p>Brand: {{$element.Brand}}</p>
+        <p>Status: {{$element.Status}}</p>
+    {{end}}
+{{end}}

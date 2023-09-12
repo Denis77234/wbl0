@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="http://localhost:4000/showorder" method="post">
+    <input type="text" name="order_id"/>
+    <input type="submit"/>
+</form>
+{{template "order" . }}
+</body>
+</html>
